@@ -50,6 +50,8 @@ paths:
     $ref: "./apis/beacon/states/validators.yaml"
   /eth/v1/beacon/states/{state_id}/validators/{validator_id}:
     $ref: "./apis/beacon/states/validator.yaml"
+  /eth/v1/beacon/states/{state_id}/validator_balances:
+    $ref: "./apis/beacon/states/validator_balances.yaml"
   /eth/v1/beacon/states/{state_id}/committees/{epoch}:
     $ref: "./apis/beacon/states/committee.yaml"
   /eth/v1/beacon/headers:
@@ -67,7 +69,7 @@ paths:
 
   /eth/v1/beacon/pool/attestations:
     $ref: "./apis/beacon/pool/attestations.yaml"
-  /eth/v1/beacon/pool/atttester_slashings:
+  /eth/v1/beacon/pool/attester_slashings:
     $ref: "./apis/beacon/pool/attester_slashings.yaml"
   /eth/v1/beacon/pool/proposer_slashings:
     $ref: "./apis/beacon/pool/proposer_slashings.yaml"
@@ -110,7 +112,7 @@ paths:
   /eth/v1/validator/aggregate_attestation:
     $ref: "./apis/validator/aggregate_attestation.yaml"
   /eth/v1/validator/aggregate_and_proofs:
-    $ref: "./apis/validator/aggregate_and_proof.yaml"
+    $ref: "./apis/validator/aggregate_and_proofs.yaml"
   /eth/v1/validator/beacon_committee_subscriptions:
     $ref: "./apis/validator/beacon_committee_subscriptions.yaml"
 
@@ -130,6 +132,8 @@ components:
       $ref: './types/block.yaml#/SignedBeaconBlockHeader'
     ValidatorResponse:
       $ref: './types/api.yaml#/ValidatorResponse'
+    ValidatorBalanceResponse:
+      $ref: './types/api.yaml#/ValidatorBalanceResponse'
     ValidatorStatus:
       $ref: './types/api.yaml#/ValidatorStatus'
     Committee:
